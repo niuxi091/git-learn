@@ -73,7 +73,7 @@ git branch
 ##### 新建分支
 
 ```
-# 新建分支
+# 新建分支，确保在主分支上新建
 git branch 分支名称
 # 切换到新建分支
 git checkout 分支名称
@@ -81,7 +81,45 @@ git checkout 分支名称
 git checkout -b 分支名称
 ```
 
+##### 合并分支（确保在主分支master上）
 
+```
+git merge 分支名
+```
 
+##### 删除分支
 
+```
+git branch -d 分支名
+```
+
+##### 推送分支到远程仓库
+
+```
+git push -u origin 分支名
+```
+
+##### 查看远程分支
+
+```
+git remote show 远程仓库名
+```
+
+##### 下载远程分支到本地
+
+```
+git checkout -b 本地分支名 远程仓库名/远程分支名
+```
+
+##### 更新代码(远程仓库的代码要比本地代码新，当git push失败时可以先更新为最新代码然后再推送)
+
+```
+git pull
+```
+
+##### 删除远程分支
+
+```
+git push origin --delete 远程分支名
+```
 
